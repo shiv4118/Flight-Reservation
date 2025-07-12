@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull'){
             steps{
-                echo "pull the request"
+                git branch: 'main', credentialsId: 'jenkis-demo', url: 'https://github.com/shiv4118/Flight-Reservation.git'
             }
         }
         stage('build'){
