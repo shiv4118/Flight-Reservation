@@ -8,7 +8,9 @@ pipeline {
         }
         stage('build'){
             steps{
-                echo "build the request"
+                sh '''
+                    mvn clean package
+                '''
             }
         }
         stage('test'){
